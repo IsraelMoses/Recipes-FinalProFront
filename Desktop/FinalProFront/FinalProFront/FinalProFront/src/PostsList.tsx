@@ -17,9 +17,12 @@ function PostsList() {
   }, []);
   return (
     <div>
-      {posts.map((post, index) => (
-        <Post key={index} post={post} title="Post" />
-      ))}
+      {posts
+        .slice()
+        .reverse()
+        .map((post, index) => (
+          <Post key={index} post={post} title="Post" />
+        ))}
     </div>
   );
 }

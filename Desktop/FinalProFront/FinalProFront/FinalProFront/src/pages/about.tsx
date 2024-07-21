@@ -1,8 +1,14 @@
-import React from "react";
-
 function About() {
   return (
-    <div style={{ padding: "20px", width: "60%", margin: "0 auto" }}>
+    <div
+      style={{
+        padding: "20px",
+        width: "60%",
+        margin: "0 auto",
+        color: "white",
+        textShadow: "2px 2px 4px #000000",
+      }}
+    >
       <h1>About Our Recipe Sharing Website</h1>
       <p>
         Welcome to our vibrant community of culinary enthusiasts! Our recipe

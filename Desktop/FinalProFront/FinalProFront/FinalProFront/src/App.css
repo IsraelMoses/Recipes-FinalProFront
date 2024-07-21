@@ -1,0 +1,72 @@
+.button {
+  background: beige;
+}
+
+.app-background {
+  /* Remove or adjust styles that prevent scrolling */
+  /* Example: */
+  position: absolute; /* or 'relative' depending on your layout needs */
+  width: auto; /* or '100%' if it does not cover the viewport */
+  height: auto; /* Adjust based on content, not '100%' */
+  z-index: -1;
+}
+.body {
+  position: relative;
+  background-image: none; /* Remove the background image from .body */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  flex-grow: 1;
+}
+.body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("C:\\Users\\Y_Kellerman\\FinalProFront\\FinalProFront\\src\\assets\\stakeBackground.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: -1; /* Ensure it stays behind all other content */
+}
+
+.StyledPostContent {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: 100px;
+  height: 600px;
+  overflow: auto;
+  position: relative; /* Ensure this and other components are positioned relative or higher than the pseudo-element */
+  z-index: 1; /* Optional: Explicitly set a higher z-index if needed */
+  background: white;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #888 transparent; /* For Firefox, scrollbar thumb and track colors */
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+}
+.postsContainer > div:not(:last-child) {
+  border-bottom: 1px solid #bc2424; /* Adjust color and thickness as needed */
+  margin-bottom: 20px; /* Adjust spacing as needed */
+}
+.app-container {
+  display: flex;
+  flex-direction: row-reverse; /* This makes the sidebar appear on the right */
+}
